@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource/ibm-plex-sans-condensed/500.css";
+@import "@fontsource/ibm-plex-sans-condensed/600.css";
+
+@theme {
+  --color-bg: #0e100f;
+  --color-surface: #171a18;
+  --color-surface-2: #222623;
+  --color-fg: #f3f4f0;
+  --color-muted: #a7aea6;
+  --color-subtle: #7d857c;
+  --color-line: #2e3530;
+  --color-accent: #e7efe4;
+  --color-accent-fg: #141816;
+  --color-sage: #9bb8a2;
+  --color-warn: #e4c7a8;
+  --font-sans: "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  --font-display: "IBM Plex Sans Condensed", "Avenir Next Condensed", "Segoe UI", sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --tracking-brand: 0.16em;
+  --tracking-tight: -0.02em;
+}
+
+@layer base {
+  html {
+    font-size: 17px;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--color-sage);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--color-sage);
+    color: var(--color-bg);
+  }
+}
+
+.pb-safe-nav {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.pb-safe-bar {
+  padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+}
+
+.scrim {
+  background: color-mix(in oklab, var(--color-bg) 84%, transparent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .press:active {
+    transform: scale(0.98);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .press:active {
+    transform: none;
+  }
+}
