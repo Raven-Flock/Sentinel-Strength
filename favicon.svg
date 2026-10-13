@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Sentinel Strength">
+  <rect width="32" height="32" fill="#0E100F"/>
+  <rect x="7" y="4" width="18" height="5" fill="#F3F4F0"/>
+  <rect x="7" y="4" width="5" height="13" fill="#F3F4F0"/>
+  <rect x="7" y="12" width="18" height="5" fill="#F3F4F0"/>
+  <rect x="20" y="12" width="5" height="13" fill="#F3F4F0"/>
+  <rect x="7" y="20" width="18" height="5" fill="#F3F4F0"/>
+  <rect x="7" y="26" width="18" height="2" fill="#8EAE96"/>
+</svg>
